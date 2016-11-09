@@ -1,9 +1,11 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <center><h1> Isaiah C. Thomas
 </h1></center>
 <head>
  <title>Isaian Thomas</title>
-  <style>
+
+ <style>
     body {
       text-align: left;
       
@@ -30,8 +32,19 @@ background-color:rgba(255, 255, 255, .7);
   </style>
 </head>
 <body>
-  <center><img src="https://pbs.twimg.com/media/CX6VzwLWwAEQjCL.jpg" /></center>
+ 
+ 
+ <center>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id="VU" height=290 width=430>
+<img src="https://pbs.twimg.com/media/CX6VzwLWwAEQjCL.jpg" name='SlideShow' width=430 height=290>
+</td>
+</tr>
+</table>
+  </center>
 
+ 
 
 
 
@@ -39,7 +52,7 @@ background-color:rgba(255, 255, 255, .7);
 <div class="background">
 
 <p class="white text">Isaiah C. Thomas was born on April 2nd 1999, in Tampa, Florida. He was introduced to the game of basketball while in the 6th grade at Benito Middle School. Isaiah's athleticism and skills became noticeable that coaches and players both started recognizing his abilities. Isaiah started receiving invitations to play on different AAU teams and other showcases. Below are a few links to some highlight that displays his skills and abilities. Enjoy! </p>
-</div>
+<</div>
 
 <body link="blue">
 <ul style="list-style-type:disc">
@@ -49,8 +62,9 @@ background-color:rgba(255, 255, 255, .7);
 <p><li><a href="https://youtu.be/F8_xyTbkCl8">Isaiah Thomas- Summer League Highlights vs Wesley Chapel</a></li><br>
 <p><li><a href="http://www.hudl.com/athlete/6753487/isaiah-thomas">Isaiah Thomas- Hudl Page</a></li><br>
 <br></p>
-</ul>
-</body>
+
+ </ul>
+
 
  <!-- hitwebcounter Code START -->
 <a href="http://www.hitwebcounter.com" target="_blank">
@@ -59,7 +73,8 @@ background-color:rgba(255, 255, 255, .7);
                                         <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="This Website Visits" 
                                         target="_blank" style="font-family: Geneva, Arial, Helvetica; 
                                         font-size: 9px; color: #76766B; text-decoration: none ;"><strong>This Website Visits                                        </strong>
-                                        </a>  
+
+ </a>  
 <audio controls autoplay>
   
   <source src="whiteIverson.mp3" type="audio/mpeg">
@@ -67,7 +82,53 @@ Your browser does not support the audio element.
 </audio>
   
 
+ <script>
+  // Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 500;
 
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3;
+
+// Specify the image files
+var Pic = new Array();
+
+// to add more images, just continue
+// the pattern, adding to the array below
+Pic[0] = '.jpg'
+Pic[1] = '.jpg'
+Pic[2] = '.jpg'
+Pic[3] = '.jpg'
+
+
+
+// do not edit anything below this line
+var t;
+var j = 0;
+var p = Pic.length;
+var preLoad = new Array();
+for (i = 0; i < p; i++) {
+preLoad[i] = new Image();
+preLoad[i].src = Pic[i];
+}
+function runSlideShow() {
+if (document.all) {
+document.images.SlideShow.style.filter="blendTrans(duration=2)";
+document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)";
+document.images.SlideShow.filters.blendTrans.Apply();
+}
+document.images.SlideShow.src = preLoad[j].src;
+if (document.all) {
+document.images.SlideShow.filters.blendTrans.Play();
+}
+j = j + 1;
+if (j > (p - 1)) j = 0;
+t = setTimeout('runSlideShow()', slideShowSpeed);
+}
+window.onload=runSlideShow;
+ 
+ </script>  
+  
+</body>
 </html>
 
 
